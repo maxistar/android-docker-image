@@ -12,7 +12,6 @@ Simple docker image to compile android applications
 ## Example of running gradle commands
 ```
 docker run --rm -v ${PWD}:/var/app maxistar/android:latest bash \
-  -c "cd /var/app && gradle build \
-  && gradle compileDebugSources "
+  -c "gradle build && gradle compileDebugSources"
 ```
 

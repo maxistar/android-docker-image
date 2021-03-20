@@ -15,4 +15,7 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip -P
     sdkmanager --update && \
     yes | sdkmanager --licenses  && \
     sdkmanager "build-tools;30.0.2" "platform-tools" "platforms;android-30" && \
-    yes | sdkmanager --licenses
+    yes | sdkmanager --licenses && \
+    mkdir /var/app
+
+WORKDIR /var/app
