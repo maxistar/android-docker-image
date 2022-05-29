@@ -7,7 +7,11 @@ Simple docker image to compile android applications
 `docker build -t maxistar/android .`
 
 ## Publish image
-`docker image push maxistar/android:latest`
+```
+docker image tag maxistar/android maxistar/android:gradle_v7.3.1
+docker image push maxistar/android:gradle_v7.3.1
+docker image push maxistar/android:latest
+```
 
 ## Start shell
 `docker run -it maxistar/android:latest /bin/bash -l`
